@@ -3,13 +3,17 @@
 
 # TEAM
 
+    Sander Houttekier -- Owner -- @sanderh
     <name> -- <role> -- <twitter>
 
 # THANKS
 
-    <name>
+    Linnovate for letting us use the MEAN Stack (@mean_io)
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
-    jQuery, Modernizr
+    HTML5
+    CSS3
+    jQuery
+    Modernizr
+    AngularJS
