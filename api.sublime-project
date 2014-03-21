@@ -7,7 +7,7 @@
             // relative paths to the root
             "path": "/",
             // optionally give it a different name
-            "name": "My Project",
+            "name": "API-builder",
             // possible folders to exclude
             "folder_exclude_patterns": [
                 "node_modules",
