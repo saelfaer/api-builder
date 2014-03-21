@@ -3,11 +3,21 @@
 {% block content %}
     <div class="row">
         <div class="col-md-offset-1 col-md-5">
+            {% if auth_available.facebook %}
             <a href="/auth/facebook"><img src="/img/icons/facebook.png"></a>
+            {% endif %}
+            {% if auth_available.github %}
             <a href="/auth/github"><img src="/img/icons/github.png"></a>
+            {% endif %}
+            {% if auth_available.twitter %}
             <a href="/auth/twitter"><img src="/img/icons/twitter.png"></a>
+            {% endif %}
+            {% if auth_available.google %}
             <a href="/auth/google"><img src="/img/icons/google.png"></a>
+            {% endif %}
+            {% if auth_available.linkedin %}
             <a href="/auth/linkedin"><img src="/img/icons/linkedin.png"></a>
+            {% endif %}
         </div>
         <div class="col-md-6">
             {% if message && message.length  %}

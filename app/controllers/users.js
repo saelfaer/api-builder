@@ -4,7 +4,15 @@
  * Module dependencies.
  */
 var mongoose = require('mongoose'),
-    User = mongoose.model('User');
+    User = mongoose.model('User'),
+    config = require('../../config/config.js'),
+    auth_available = {
+        facebook: config.facebook.enabled,
+        github: config.github.enabled,
+        twitter: config.twitter.enabled,
+        google: config.google.enabled,
+        linkedin: config.linkedin.enabled
+    };
 
 /**
  * Auth callback
@@ -19,6 +27,7 @@ exports.authCallback = function(req, res) {
 exports.signin = function(req, res) {
     res.render('users/signin', {
         title: 'Signin',
+        auth_available: auth_available,
         message: req.flash('error')
     });
 };
@@ -29,6 +38,7 @@ exports.signin = function(req, res) {
 exports.signup = function(req, res) {
     res.render('users/signup', {
         title: 'Sign up',
+        auth_available: auth_available,
         user: new User()
     });
 };
